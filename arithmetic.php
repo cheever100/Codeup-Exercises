@@ -35,10 +35,10 @@ function divide($a, $b) {
 }
 
 function modulus($a, $b) {
-	if (is_numeric($a) && is_numeric($b)) {
+	if (is_numeric($a) && is_numeric($b) && $b != 0) {
     	return $a % $b;
     } else {
-    	return errorMessage();
+    	return "ERROR: Both arguments ($a, $b) must be numbers and can't be zero.\n";
     }
 }
 

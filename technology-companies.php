@@ -1,0 +1,91 @@
+<?php
+
+$companies = [
+    'Sun Microsystems' => [
+        'Vinod Khosla',
+        'Bill Joy',
+        'Andy Bechtolsheim',
+        'Scott McNealy'
+    ],
+    'Silicon Graphics' => [
+        'Jim Clark',
+        'Ed McCracken'
+    ],
+    'Cray' => [
+        'William Norris',
+        'Seymour Cray'
+    ],
+    'NeXT' => [
+        'Steve Jobs',
+        'Avie Tevanian',
+        'Joanna Hoffman',
+        'Bud Tribble',
+        'Susan Kare'
+    ],
+    'Acorn Computers' => [
+        'Steve Furber',
+        'Sophie Wilson',
+        'Hermann Hauser',
+        'Jim Mitchell'
+    ],
+    'MIPS Technologies' => [
+        'Skip Stritter',
+        'John L. Hennessy'
+    ],
+    'Commodore' => [
+        'Yash Terakura',
+        'Bob Russell',
+        'Bob Yannes',
+        'David A. Ziembicki',
+        'Jay Miner'
+    ],
+    'Be Inc' => [
+        'Steve Sakoman',
+        'Jean-Louis Gassée'
+    ]
+];
+
+// Add code to output the $companies array in its current form. CORRECT!
+    // foreach($companies as $names => $people) {
+    //     echo $names . ",\n";
+    // }
+        
+
+// Sort the $companies array by company name and output the results.
+        // ksort($companies);
+        // print_r($companies);
+
+/* Sort the people in each company alphabetically. 
+ * You will need to use a foreach loop.  
+ * Output the result.
+ */
+    foreach ($companies as $companyName => $people) {
+        asort($companies[$companyName]);
+    }
+    print_r($companies);
+
+// Ryan's answer to this problem:
+
+foreach ($companies as $companyName => $people) {
+        // $people not sorted
+        asort($people);
+        // $people sorted
+        
+        // assign (over-writing)
+        $companies[$companyName] = $people;
+    }
+    print_r($companies);
+
+
+/* Sort the companies from "biggest" to "smallest".
+ * don't loose the company names!
+ */
+    
+        // arsort($companies);
+        // print_r($companies);
+    
+ 
+
+
+
+
